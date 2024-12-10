@@ -36,7 +36,7 @@ int main (){
 
             // récupère la case du joueur
             unsigned int numeroCase {choix_case(plateau)};
-            plateau[numeroCase-1] = player[numJoueur].symbol;
+            plateau[numeroCase] = player[numJoueur].symbol;
 
             // fonction permettant de vérifier si le joueur a gagné
             fin = does_player_win(numeroCase, plateau);

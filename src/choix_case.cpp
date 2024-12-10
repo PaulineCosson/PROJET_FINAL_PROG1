@@ -32,12 +32,12 @@ unsigned int choix_case (std::array <char, 9> plateau){
 }
 
 unsigned int choix_case_IA (std::array <char, 9> plateau){
+    std::srand(std::time(nullptr));
     unsigned int numeroCase {};
     while (true)
     {
-        std::srand(std::time(nullptr));
         //l'IA choisie une case au hasard
-        int numeroCase { std::rand()%8};
+        numeroCase = std::rand()%8;
         //on verifie que la case est vide
         if(plateau[numeroCase] == '.'){ 
             break;
