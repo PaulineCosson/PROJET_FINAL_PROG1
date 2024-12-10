@@ -13,9 +13,6 @@ int main (){
     //choix du mode de jeu 0 = 2 joueurs / 1 = IA
     bool modeJeu {menu()};
 
-    Player player1 {};
-    Player player2 {};
-
     std::array <Player, 2> player {};
     //on crée le profil du 1er joueur
     player[0] = create_player();
