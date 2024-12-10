@@ -12,7 +12,7 @@ bool menu (){
 
         std::cin >> choix;
 
-            if (std::cin.fail())
+        if (std::cin.fail())
         {
             std::cin.clear(); // On remet std::cin dans un état fonctionnel.
             std::cin.ignore(255, '\n'); // On vide les caractères mémorisés.

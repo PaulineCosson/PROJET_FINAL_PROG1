@@ -3,6 +3,7 @@
 #include "game_board.hpp"
 #include "menu.hpp"
 #include "choix_case.hpp"
+#include "does_player_win.hpp"
 
 
 int main (){
@@ -13,35 +14,67 @@ int main (){
     bool modeJeu {menu()};
 
     Player player1 {};
-    //trouver comment bloquer le choix du symbol
     Player player2 {};
 
-    bool fin {0};
-    int tour {1};
-    if (modeJeu == 0){
-        player1 = create_player();
-        player2 = create_player();
+    std::array <Player, 2> player {};
+    //on crée le profil du 1er joueur
+    player[0] = create_player();
 
-        for (int i{0}; i<9; i++){
+    
+    int tour {0};
+    bool fin {0};
+
+
+    if (modeJeu == 0){
+        //on crée le profil du 2e joueur
+        player[1] = create_player();
+        while (fin == false && tour < 9){
             char symbol {};
             draw_game_board(plateau);
-            std::cout << "Tour de : ";
-            if (tour%2 !=0 ){
-                std::cout << player1.name << "\n";
-                symbol = player1.symbol;
-            }
-            else {
-                std::cout << player2.name << "\n";
-                symbol = player2.symbol;
-            }
+            int numJoueur {tour%2};
+            std::cout << "Tour de : " << player[numJoueur].name << std::endl;
 
-            numeroCase = choixCase(plateau);
-            plateau[numeroCase-1] = symbol;
+            // récupère la case du joueur
+            unsigned int numeroCase {choix_case(plateau)};
+            plateau[numeroCase-1] = player[numJoueur].symbol;
+
+            // fonction permettant de vérifier si le joueur a gagné
+            fin = does_player_win(numeroCase, plateau);
             tour++;
         }
-
     }
-    std::cout << player1.name <<" "<< player1.symbol << std::endl;
+    else{
+        //on crée le profil de l'IA
+        player[1].name = "IA";
+        player[1].symbol = '&';
 
+        while (fin == false && tour < 9){
+            char symbol {};
+            draw_game_board(plateau);
+            int numJoueur {tour%2};
+            std::cout << "Tour de : " << player[numJoueur].name << std::endl;
+
+            unsigned int numeroCase {};
+            if (numJoueur == 0){
+                // récupère la case du joueur
+                numeroCase = choix_case(plateau);
+            }
+            else{
+                numeroCase = choix_case_IA(plateau);
+            }
+            plateau[numeroCase] = player[numJoueur].symbol;
+
+            // fonction permettant de vérifier si le joueur a gagné
+            fin = does_player_win(numeroCase, plateau);
+            tour++;
+        }
+    }
+    
     draw_game_board(plateau);
+    if (fin == true){
+        std::cout << player[(tour-1)%2].name << " a gagné la partie" << std::endl ;
+    }
+    else{
+        std::cout << "Personne n'a gagné la partie.." << std::endl ;
+    }
 }

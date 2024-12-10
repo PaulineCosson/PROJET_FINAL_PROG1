@@ -2,8 +2,6 @@
 #include "player.hpp"
 
 
-
-
 Player create_player (){
     Player player;
     std::cout << "Quel est votre surnom : ";
