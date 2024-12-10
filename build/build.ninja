@@ -56,6 +56,13 @@ build CMakeFiles/projet_final.dir/src/main_projet_final.cpp.obj: CXX_COMPILER__p
   OBJECT_DIR = CMakeFiles\projet_final.dir
   OBJECT_FILE_DIR = CMakeFiles\projet_final.dir\src
 
+build CMakeFiles/projet_final.dir/src/choix_case.cpp.obj: CXX_COMPILER__projet_final_unscanned_Debug C$:/Users/cosso/Documents/00_COURS_IMAC_1/Prog_S1/PROJET_FINAL_PROG1/src/choix_case.cpp || cmake_object_order_depends_target_projet_final
+  DEP_FILE = CMakeFiles\projet_final.dir\src\choix_case.cpp.obj.d
+  FLAGS = -g -Wall -Wextra -Wpedantic -pedantic-errors
+  INCLUDES = -IC:/Users/cosso/Documents/00_COURS_IMAC_1/Prog_S1/PROJET_FINAL_PROG1/src
+  OBJECT_DIR = CMakeFiles\projet_final.dir
+  OBJECT_FILE_DIR = CMakeFiles\projet_final.dir\src
+
 build CMakeFiles/projet_final.dir/src/game_board.cpp.obj: CXX_COMPILER__projet_final_unscanned_Debug C$:/Users/cosso/Documents/00_COURS_IMAC_1/Prog_S1/PROJET_FINAL_PROG1/src/game_board.cpp || cmake_object_order_depends_target_projet_final
   DEP_FILE = CMakeFiles\projet_final.dir\src\game_board.cpp.obj.d
   FLAGS = -g -Wall -Wextra -Wpedantic -pedantic-errors
@@ -85,7 +92,7 @@ build CMakeFiles/projet_final.dir/src/player.cpp.obj: CXX_COMPILER__projet_final
 #############################################
 # Link the executable C:\Users\cosso\Documents\00_COURS_IMAC_1\Prog_S1\PROJET_FINAL_PROG1\bin\Debug\projet_final.exe
 
-build C$:/Users/cosso/Documents/00_COURS_IMAC_1/Prog_S1/PROJET_FINAL_PROG1/bin/Debug/projet_final.exe: CXX_EXECUTABLE_LINKER__projet_final_Debug CMakeFiles/projet_final.dir/src/main_projet_final.cpp.obj CMakeFiles/projet_final.dir/src/game_board.cpp.obj CMakeFiles/projet_final.dir/src/menu.cpp.obj CMakeFiles/projet_final.dir/src/player.cpp.obj
+build C$:/Users/cosso/Documents/00_COURS_IMAC_1/Prog_S1/PROJET_FINAL_PROG1/bin/Debug/projet_final.exe: CXX_EXECUTABLE_LINKER__projet_final_Debug CMakeFiles/projet_final.dir/src/main_projet_final.cpp.obj CMakeFiles/projet_final.dir/src/choix_case.cpp.obj CMakeFiles/projet_final.dir/src/game_board.cpp.obj CMakeFiles/projet_final.dir/src/menu.cpp.obj CMakeFiles/projet_final.dir/src/player.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\projet_final.dir

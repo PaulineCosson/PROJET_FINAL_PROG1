@@ -5,6 +5,7 @@
 			"expression" : "C:/Users/cosso/Documents/00_COURS_IMAC_1/Prog_S1/PROJET_FINAL_PROG1/src/*.cpp",
 			"paths" : 
 			[
+				"C:/Users/cosso/Documents/00_COURS_IMAC_1/Prog_S1/PROJET_FINAL_PROG1/src/choix_case.cpp",
 				"C:/Users/cosso/Documents/00_COURS_IMAC_1/Prog_S1/PROJET_FINAL_PROG1/src/game_board.cpp",
 				"C:/Users/cosso/Documents/00_COURS_IMAC_1/Prog_S1/PROJET_FINAL_PROG1/src/main_projet_final.cpp",
 				"C:/Users/cosso/Documents/00_COURS_IMAC_1/Prog_S1/PROJET_FINAL_PROG1/src/menu.cpp",

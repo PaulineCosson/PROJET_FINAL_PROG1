@@ -7,6 +7,12 @@
 },
 {
   "directory": "C:/Users/cosso/Documents/00_COURS_IMAC_1/Prog_S1/PROJET_FINAL_PROG1/build",
+  "command": "C:\\Winlibs\\bin\\g++.exe -IC:/Users/cosso/Documents/00_COURS_IMAC_1/Prog_S1/PROJET_FINAL_PROG1/src -g -Wall -Wextra -Wpedantic -pedantic-errors -o CMakeFiles\\projet_final.dir\\src\\choix_case.cpp.obj -c C:\\Users\\cosso\\Documents\\00_COURS_IMAC_1\\Prog_S1\\PROJET_FINAL_PROG1\\src\\choix_case.cpp",
+  "file": "C:\\Users\\cosso\\Documents\\00_COURS_IMAC_1\\Prog_S1\\PROJET_FINAL_PROG1\\src\\choix_case.cpp",
+  "output": "CMakeFiles\\projet_final.dir\\src\\choix_case.cpp.obj"
+},
+{
+  "directory": "C:/Users/cosso/Documents/00_COURS_IMAC_1/Prog_S1/PROJET_FINAL_PROG1/build",
   "command": "C:\\Winlibs\\bin\\g++.exe -IC:/Users/cosso/Documents/00_COURS_IMAC_1/Prog_S1/PROJET_FINAL_PROG1/src -g -Wall -Wextra -Wpedantic -pedantic-errors -o CMakeFiles\\projet_final.dir\\src\\game_board.cpp.obj -c C:\\Users\\cosso\\Documents\\00_COURS_IMAC_1\\Prog_S1\\PROJET_FINAL_PROG1\\src\\game_board.cpp",
   "file": "C:\\Users\\cosso\\Documents\\00_COURS_IMAC_1\\Prog_S1\\PROJET_FINAL_PROG1\\src\\game_board.cpp",
   "output": "CMakeFiles\\projet_final.dir\\src\\game_board.cpp.obj"
