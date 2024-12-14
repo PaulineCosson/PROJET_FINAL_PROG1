@@ -1,10 +1,22 @@
 # ninja log v6
 118	1237	7555305539583612	CMakeFiles/projet_final.dir/src/menu.cpp.obj	8f541418d26212d6
-820	968	7555330312143893	C:/Users/cosso/Documents/00_COURS_IMAC_1/Prog_S1/PROJET_FINAL_PROG1/bin/Debug/projet_final.exe	2d398ae4aa0410bc
-52	476	7555437006763837	build.ninja	1638178151e305a8
+462	839	7555526695158669	C:/Users/cosso/Documents/00_COURS_IMAC_1/Prog_S1/PROJET_FINAL_PROG1/bin/Debug/projet_final.exe	2d398ae4aa0410bc
+52	476	7558821695025226	build.ninja	1638178151e305a8
 69	716	7555319089059842	CMakeFiles/projet_final.dir/src/choix_case.cpp.obj	8fdfea5bbc2cea3f
-49	698	7555306570872263	CMakeFiles/projet_final.dir/src/main_projet_final.cpp.obj	b2c9a6fd97677dc4
+44	462	7555526690979647	CMakeFiles/projet_final.dir/src/main_projet_final.cpp.obj	b2c9a6fd97677dc4
 124	1242	7555305539662353	CMakeFiles/projet_final.dir/src/player.cpp.obj	bbb8d526440bfbca
-53	820	7555330304441885	CMakeFiles/projet_final.dir/src/does_player_win.cpp.obj	91b8a600498f17e6
-3	48	7555330303982392	C:/Users/cosso/Documents/00_COURS_IMAC_1/Prog_S1/PROJET_FINAL_PROG1/build/CMakeFiles/cmake.verify_globs	acf47ea4b58da24c
+46	455	7555526691004688	CMakeFiles/projet_final.dir/src/does_player_win.cpp.obj	91b8a600498f17e6
+18	43	7555526794205576	C:/Users/cosso/Documents/00_COURS_IMAC_1/Prog_S1/PROJET_FINAL_PROG1/build/CMakeFiles/cmake.verify_globs	acf47ea4b58da24c
 47	396	7549270975345236	CMakeFiles/projet_final.dir/src/game_board.cpp.obj	a946dfed6b0f7f28
+2	64	7558830267928937	C:/Users/cosso/Documents/00_COURS_IMAC_1/Prog_S1/PROJET_FINAL_PROG1/build/CMakeFiles/cmake.verify_globs	acf47ea4b58da24c
+75	1121	7558830268697515	CMakeFiles/projet_final.dir/src/player.cpp.obj	bbb8d526440bfbca
+69	1124	7558830268635846	CMakeFiles/projet_final.dir/src/main_projet_final.cpp.obj	b2c9a6fd97677dc4
+1125	1578	7558830279188749	C:/Users/cosso/Documents/00_COURS_IMAC_1/Prog_S1/PROJET_FINAL_PROG1/bin/Debug/projet_final.exe	2d398ae4aa0410bc
+35	84	7558830406352130	C:/Users/cosso/Documents/00_COURS_IMAC_1/Prog_S1/PROJET_FINAL_PROG1/build/CMakeFiles/cmake.verify_globs	acf47ea4b58da24c
+2	49	7558832104926838	C:/Users/cosso/Documents/00_COURS_IMAC_1/Prog_S1/PROJET_FINAL_PROG1/build/CMakeFiles/cmake.verify_globs	acf47ea4b58da24c
+60	697	7558832105446591	CMakeFiles/projet_final.dir/src/player.cpp.obj	bbb8d526440bfbca
+54	735	7558832105446591	CMakeFiles/projet_final.dir/src/main_projet_final.cpp.obj	b2c9a6fd97677dc4
+735	880	7558832112275188	C:/Users/cosso/Documents/00_COURS_IMAC_1/Prog_S1/PROJET_FINAL_PROG1/bin/Debug/projet_final.exe	2d398ae4aa0410bc
+1	32	7558832737810357	C:/Users/cosso/Documents/00_COURS_IMAC_1/Prog_S1/PROJET_FINAL_PROG1/build/CMakeFiles/cmake.verify_globs	acf47ea4b58da24c
+36	480	7558832738151318	CMakeFiles/projet_final.dir/src/main_projet_final.cpp.obj	b2c9a6fd97677dc4
+480	600	7558832742604599	C:/Users/cosso/Documents/00_COURS_IMAC_1/Prog_S1/PROJET_FINAL_PROG1/bin/Debug/projet_final.exe	2d398ae4aa0410bc

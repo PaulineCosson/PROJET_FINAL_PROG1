@@ -9,4 +9,4 @@ struct Player
     char symbol {};
 };
 
-Player create_player ();
+Player create_player (char symbolPris);

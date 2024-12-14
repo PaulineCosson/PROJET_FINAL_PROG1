@@ -15,18 +15,18 @@ int main (){
 
     std::array <Player, 2> player {};
     //on crée le profil du 1er joueur
-    player[0] = create_player();
+    player[0] = create_player('.');
 
     
     int tour {0};
     bool fin {0};
 
-
-    if (modeJeu == 0){
+    //mode deux joueurs 
+    if (modeJeu == 0){ 
         //on crée le profil du 2e joueur
-        player[1] = create_player();
+        player[1] = create_player(player[0].symbol);
+
         while (fin == false && tour < 9){
-            char symbol {};
             draw_game_board(plateau);
             int numJoueur {tour%2};
             std::cout << "Tour de : " << player[numJoueur].name << std::endl;
@@ -40,13 +40,12 @@ int main (){
             tour++;
         }
     }
-    else{
+    else{   //mode 1 joueur face à une IA
         //on crée le profil de l'IA
         player[1].name = "IA";
         player[1].symbol = '&';
 
         while (fin == false && tour < 9){
-            char symbol {};
             draw_game_board(plateau);
             int numJoueur {tour%2};
             std::cout << "Tour de : " << player[numJoueur].name << std::endl;
