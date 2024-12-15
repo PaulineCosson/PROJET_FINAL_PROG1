@@ -32,6 +32,7 @@ unsigned int choix_case (std::array <char, 9> plateau){
 }
 
 bool does_2_symbols_align (char symbolJ1,int numCase, std::array <char, 9> plateau);
+bool is_winning_box ( int numCase, std::array <char, 9> plateau);
 
 unsigned int choix_case_IA (char symbolJ1, std::array <char, 9> plateau){
     std::srand(std::time(nullptr));
@@ -40,9 +41,10 @@ unsigned int choix_case_IA (char symbolJ1, std::array <char, 9> plateau){
     //on regarde si le joueur 1 a aligné 2 symbols et on retourne le numéro de la case qui contre le coup 
     for(int i{0}; i< 9; i++){
         if(plateau[i] == '.'){ 
-            bool two_symbols{false};
-            two_symbols = does_2_symbols_align (symbolJ1,i,plateau);
-            if (two_symbols == true){
+            if (is_winning_box(i,plateau)==true){
+                return i;
+            }
+            if (does_2_symbols_align (symbolJ1,i,plateau) == true){
                 return i;
             }
         }
@@ -110,5 +112,57 @@ bool does_2_symbols_align (char symbolJ1, int numCase, std::array <char, 9> plat
     }
 
     return false;
+}
 
+bool is_winning_box ( int numCase, std::array <char, 9> plateau){
+    //on cherche dans quelle ligne est le numéro de case et quelle est le numéro de case au début de cette ligne
+    int startLine = ((numCase)/3) * 3;
+    //on cherche dans quelle colonne est le numéro de case et quelle est le numéro de case au début de cette colonne
+    int startColumn = numCase%3;
+
+    int nbr_symbol{0};
+    for (int i{startLine}; i<(startLine+3); i++){
+        if (plateau[i]=='&'){
+            nbr_symbol++;
+        }
+    }
+    if (nbr_symbol==2){
+        return true;
+    }
+
+    nbr_symbol=0;
+    for (int i{startColumn}; i<(startLine+7); i+=3){
+        if (plateau[i]=='&'){
+            nbr_symbol++;
+        }
+    }
+    if (nbr_symbol==2){
+        return true;
+    }
+
+    nbr_symbol=0;
+    if (numCase == 0 || numCase == 4 || numCase == 8){
+        for (int i{0}; i<9; i+=4){
+            if (plateau[i]=='&'){
+                nbr_symbol++;
+            }
+        }
+        if (nbr_symbol==2){
+            return true;
+        }
+    }
+
+    nbr_symbol=0;
+    if (numCase == 2 || numCase == 4 || numCase == 6){
+        for (int i{2}; i<7; i+=2){
+            if (plateau[i]=='&'){
+                nbr_symbol++;
+            }
+        }
+        if (nbr_symbol==2){
+            return true;
+        }
+    }
+
+    return false;
 }
