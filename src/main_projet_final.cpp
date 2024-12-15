@@ -6,10 +6,13 @@
 #include "does_player_win.hpp"
 
 
+
 int main (){
+    std::setlocale(LC_ALL, ".65001");
     //initialise un plateau vide
     std::array <char, 9> plateau {};
     plateau.fill('.');
+    
     //choix du mode de jeu 0 = 2 joueurs / 1 = IA
     bool modeJeu {menu()};
 
@@ -28,6 +31,8 @@ int main (){
 
         while (fin == false && tour < 9){
             draw_game_board(plateau);
+            std::cout <<  std::endl;
+
             int numJoueur {tour%2};
             std::cout << "Tour de : " << player[numJoueur].name << std::endl;
 
@@ -47,6 +52,8 @@ int main (){
 
         while (fin == false && tour < 9){
             draw_game_board(plateau);
+            std::cout <<  std::endl;  
+
             int numJoueur {tour%2};
             std::cout << "Tour de : " << player[numJoueur].name << std::endl;
 
@@ -56,7 +63,8 @@ int main (){
                 numeroCase = choix_case(plateau);
             }
             else{
-                numeroCase = choix_case_IA(plateau);
+                // récupère la case de l'ia
+                numeroCase = choix_case_IA(player[0].symbol, plateau);
             }
             plateau[numeroCase] = player[numJoueur].symbol;
 

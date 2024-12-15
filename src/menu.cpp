@@ -1,8 +1,19 @@
 #include "menu.hpp"
+#include "game_board.hpp"
+
 
 bool menu (){
     std::cout << "Bienvenue dans le jeu du TicTacToe" << std::endl;
+    std::cout << "Le but du jeu est d’aligner avant son adversaire 3 symboles identiques." << std::endl;
+    std::cout << "Le plateau et les numéros de cases se présentent sous cette forme :" << std::endl;
     
+    std::array <char, 9> plateau_exemple {};
+    for (int i{0}; i<9; i++){
+        plateau_exemple[i]=i+49;
+    }
+    draw_game_board(plateau_exemple);
+
+
     int choix{1};
     while (true)
     {
