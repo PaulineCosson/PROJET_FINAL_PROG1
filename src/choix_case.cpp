@@ -95,7 +95,7 @@ bool does_2_symbols_align (char symbolJ1, int numCase, std::array <char, 9> plat
     }
 
     nbr_symbol=0;
-    for (int i{startColumn}; i<(startLine+7); i+=3){
+    for (int i{startColumn}; i<(startColumn+7); i+=3){
         if (plateau[i]==symbolJ1){
             nbr_symbol++;
         }
