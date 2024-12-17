@@ -33,21 +33,38 @@ unsigned int choix_case (std::array <char, 9> plateau){
 
 bool does_2_symbols_align (char symbolJ1,int numCase, std::array <char, 9> plateau);
 bool is_winning_box ( int numCase, std::array <char, 9> plateau);
+bool is_one_IA_symbol ( int numCase, std::array <char, 9> plateau);
 
 unsigned int choix_case_IA (char symbolJ1, std::array <char, 9> plateau){
     std::srand(std::time(nullptr));
     unsigned int numeroCase {};
 
-    //on regarde si le joueur 1 a aligné 2 symbols et on retourne le numéro de la case qui contre le coup 
+    int caseGagnante{10};
+    int casePerdante{10};
+    int caseAvantageuse{10};
     for(int i{0}; i< 9; i++){
         if(plateau[i] == '.'){ 
-            if (is_winning_box(i,plateau)==true){
-                return i;
+            //on regarde si il y a deux symboles de l'IA alignés
+            if (is_winning_box(i,plateau)){
+                caseGagnante = i;
             }
-            if (does_2_symbols_align (symbolJ1,i,plateau) == true){
-                return i;
+            else if (does_2_symbols_align (symbolJ1,i,plateau)){
+            //on regarde si il y a deux symboles du joueur alignés
+                casePerdante = i;
+            }
+            else if (is_one_IA_symbol(i,plateau)){
+                caseAvantageuse = i;
             }
         }
+    }
+    if (caseGagnante != 10){
+        return caseGagnante;
+    }
+    else if (casePerdante != 10){
+        return casePerdante;
+    }
+    else if (caseAvantageuse!=10){
+        return caseAvantageuse;
     }
     while (true)
     {
@@ -131,7 +148,7 @@ bool is_winning_box ( int numCase, std::array <char, 9> plateau){
     }
 
     nbr_symbol=0;
-    for (int i{startColumn}; i<(startLine+7); i+=3){
+    for (int i{startColumn}; i<(startColumn+7); i+=3){
         if (plateau[i]=='&'){
             nbr_symbol++;
         }
@@ -160,6 +177,64 @@ bool is_winning_box ( int numCase, std::array <char, 9> plateau){
             }
         }
         if (nbr_symbol==2){
+            return true;
+        }
+    }
+
+    return false;
+}
+
+bool is_one_IA_symbol ( int numCase, std::array <char, 9> plateau){
+    //on cherche dans quelle ligne est le numéro de case et quelle est le numéro de case au début de cette ligne
+    int startLine = ((numCase)/3) * 3;
+    //on cherche dans quelle colonne est le numéro de case et quelle est le numéro de case au début de cette colonne
+    int startColumn = numCase%3;
+
+    int nbr_symbol{0};
+    int nbr_empty{0};
+    for (int i{startLine}; i<(startLine+3); i++){
+        if (plateau[i]=='&'){
+            nbr_symbol++;
+            nbr_empty++;
+        }
+    }
+    if (nbr_symbol==1 || nbr_empty == 2){
+        return true;
+    }
+
+    nbr_symbol=0;
+    for (int i{startColumn}; i<(startColumn+7); i+=3){
+        if (plateau[i]=='&'){
+            nbr_symbol++;
+            nbr_empty++;
+        }
+    }
+    if (nbr_symbol==1 || nbr_empty == 2){
+        return true;
+    }
+
+    nbr_symbol=0;
+    if (numCase == 0 || numCase == 4 || numCase == 8){
+        for (int i{0}; i<9; i+=4){
+            if (plateau[i]=='&'){
+                nbr_symbol++;
+                nbr_empty++;
+            }
+        }
+        if (nbr_symbol==1 || nbr_empty == 2){
+            return true;
+        }
+    }
+
+    nbr_symbol=0;
+    if (numCase == 2 || numCase == 4 || numCase == 6){
+        for (int i{2}; i<7; i+=2){
+            if (plateau[i]=='&'){
+                nbr_symbol++;
+                nbr_empty++;
+            }
+        }
+        if (nbr_symbol==1 || nbr_empty == 2){
             return true;
         }
     }
