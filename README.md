@@ -1,6 +1,9 @@
 # ❎ Projet TicTacToe 🅾️
 Pour clôturer notre cours de Programmation 1 d'IMAC 1 nous avons dû réaliser un jeu de morpion. Ce jeu comprend deux modes de jeux : un mode deux joueurs et un mode face à l'ordinateur. Dans la suite de ce README je vais détailler mon travail, mon organisation et les difficultés que j'ai rencontrées. 
 
+## Système d'exploitation testé
+J'ai créer et testé mon code sur windows 11 (23H2) avec le compilateur GCC 14.2.0.
+
 ## 🕹️ Fonctionnalités du jeu 
 Dans ma version du jeu, nous retrouvons toutes les fonctionnalités demandées dans le cahier des charges, c'est à dire :
 - Une structure de joueur
