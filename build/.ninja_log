@@ -1,7 +1,7 @@
 # ninja log v6
 43	461	7559843020904664	CMakeFiles/projet_final.dir/src/menu.cpp.obj	8f541418d26212d6
 1941	2252	7560974240180990	C:/Users/cosso/Documents/00_COURS_IMAC_1/Prog_S1/PROJET_FINAL_PROG1/bin/Debug/projet_final.exe	2d398ae4aa0410bc
-52	476	7562196041800977	build.ninja	1638178151e305a8
+52	476	7562412946610759	build.ninja	1638178151e305a8
 114	1940	7560974221914958	CMakeFiles/projet_final.dir/src/choix_case.cpp.obj	8fdfea5bbc2cea3f
 28	402	7559919081076021	CMakeFiles/projet_final.dir/src/main_projet_final.cpp.obj	b2c9a6fd97677dc4
 60	697	7558832105446591	CMakeFiles/projet_final.dir/src/player.cpp.obj	bbb8d526440bfbca
